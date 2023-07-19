@@ -1,0 +1,50 @@
+.form-box {
+    width: 30%;
+    height: 50%;
+    float: left;
+    color: white;
+    background-color: #323f4b;
+    border: 1px solid grey;
+    text-align: center;
+    font-size: 20px;
+    padding: 2rem;
+    padding-bottom: 15px;
+    translate: 40%;
+    margin:20px;
+}
+
+.new-book__controls {
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem; 
+}
+
+.form-label {
+    text-align: center;
+    padding: 0.5rem;
+    overflow: hidden;
+}
+
+  
+.new-book__controls input {
+    font: inherit;
+    font-size: smaller;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 20rem;
+    max-width: 100%;
+}
+
+.new-book__actions {
+    text-align: right;
+}
+
+button {
+    border-radius: 50px;
+    width:auto;
+    margin:20px;
+    font-size: 20px;
+    translate: 0, -10px;
+}
