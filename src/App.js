@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Navbar from "./components/Navbar";
 import "./fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf";
 import "./fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf";
 import "./fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf";
@@ -15,6 +16,7 @@ import tanciskola from "./assets/images/Tanciskola.jpg";
 import literature from "./assets/icons/literature.png";
 import NewBook from "./components/NewBook/NewBook";
 import Books from "./components/Books/Books";
+import ExploreTopBooks from "./components/UI/ExploreTopBooks";
 
 const App = () => {
   const DUMMY_BOOKS = [
@@ -58,6 +60,8 @@ const App = () => {
 
   return (
     <div>
+      <Navbar></Navbar>
+      <ExploreTopBooks/>
       <Books items={books}/>
       <NewBook onAddBook={addBookHandler} />
       <Book items={books} />
