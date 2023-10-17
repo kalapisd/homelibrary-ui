@@ -1,3 +1,20 @@
+h1 {
+	font-size: 26px;
+	line-height: 34px;
+}
+
+h2 {
+	font-size: 20px;
+	line-height: 25px;
+ }
+
+h3 {
+	font-size: 12px;
+  	line-height: 27px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
 .book {
     width: 30%;
     height: 50%;
