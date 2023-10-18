@@ -1,4 +1,4 @@
-import background from "../../assets/images/wallpaper.jpg"; 
+import background from "../../../assets/images/wallpaper.jpg"; 
 
 const ExploreTopBooks = () => {
   return (
@@ -14,7 +14,7 @@ const ExploreTopBooks = () => {
       >
         <div >
           <h1 className="display-5 fw-bold">Find your next adventure</h1>
-          <p className="col-md-8 fs-4">Where would you like to go next?</p>
+          <p className="col-md-8 fs-4 text-black">Where would you like to go next?</p>
           <a
             type="button"
             className="btn btn-light btn-lg text-black"
