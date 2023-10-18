@@ -81,7 +81,7 @@ const Carousel = () => {
             </div>
 
             {/* Mobile */}
-            <div className='d-lg-none mt-3'>
+            <div className='d-sm-none mt-3'>
                 <div className='row d-flex justify-content-center align-items-center'>
                     <div className='text-center'>
                         <img
