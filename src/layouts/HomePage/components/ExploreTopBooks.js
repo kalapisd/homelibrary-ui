@@ -5,7 +5,8 @@ const ExploreTopBooks = () => {
     <div
       className="p-5 mb-4 bg-dark header"
       style={{
-        backgroundImage: `url(${background})`
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover"
       }}
     >
       <div

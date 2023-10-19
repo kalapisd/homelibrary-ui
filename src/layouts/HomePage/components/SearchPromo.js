@@ -6,12 +6,9 @@ const SearchPromo = () => {
       <div className="d-none d-lg-block">
         <div className="row g-0 mt-5">
           <div className="col-sm-6 col-md-6">
-            <div className="col-image-left">
+            <div className=".box1 img">
               <img
                 src={`${readpromo}`}
-                class="mx-auto d-block img-thumbnail"
-                width="400"
-                alt="promo"
               />
             </div>
           </div>
@@ -26,7 +23,7 @@ const SearchPromo = () => {
                 you're sure to find something captivating. Discover and lose
                 yourself in the pages of our collection today.
               </p>
-              <a className="btn main-color btn-lg text-black" href="#">
+              <a className="btn btn-secondary btn-lg text-white" href="#">
                 Sign up
               </a>
             </div>
@@ -58,7 +55,7 @@ const SearchPromo = () => {
                 you're sure to find something captivating. Discover and lose
                 yourself in the pages of our collection today.
               </p>
-              <a className="btn main-color btn-sm text-black" href="#">
+              <a className="btn btn-secondary btn-sm text-white" href="#">
                 Sign up
               </a>
             </div>

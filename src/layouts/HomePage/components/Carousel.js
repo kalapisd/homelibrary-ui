@@ -22,8 +22,7 @@ const Carousel = () => {
                                 <div className='text-center'>
                                     <img
                                         src={`${estaub}`}
-                                        width='151'
-                                        height='233'
+                                        width='200'                                       
                                         alt="book"
                                     />
                                     <h6 className='mt-2'>Book</h6>
@@ -39,8 +38,7 @@ const Carousel = () => {
                                 <div className='text-center'>
                                     <img
                                         src={`${tuzserlege}`}
-                                        width='151'
-                                        height='233'
+                                        width='200'
                                         alt="book"
                                     />
                                     <h6 className='mt-2'>Book</h6>
@@ -56,8 +54,7 @@ const Carousel = () => {
                                 <div className='text-center'>
                                     <img
                                         src={`${tanciskola}`}
-                                        width='151'
-                                        height='233'
+                                        width='200'
                                         alt="book"
                                     />
                                     <h6 className='mt-2'>Book</h6>
@@ -86,8 +83,7 @@ const Carousel = () => {
                     <div className='text-center'>
                         <img
                             src={`${estaub}`}
-                            width='151'
-                            height='233'
+                            width='200'
                             alt="book"
                         />
                         <h6 className='mt-2'>Book</h6>

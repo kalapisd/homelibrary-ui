@@ -16,17 +16,14 @@ const Calendar = () => {
             releases and stay connected with the world of literature.
           </p>
           <div className="d-grid gap-2 justify-content-md-start mb-4 mb-lg-3">
-            <a className="btn main-color btn-lg text-black" href="#">
+            <a className="btn btn-secondary btn-lg text-white" href="#">
               Sign up
             </a>
           </div>
         </div>
-        <div className="col-lg-4 offset-lg-1 shadow-lg lost-image">
+        <div className="col-lg-4 offset-lg-1 shadow-lg box-1 img">
           <img
             src={`${calendar}`}
-            class="mx-auto d-block img-thumbnail"
-            width="400"
-            alt="promo"
           />
         </div>
       </div>

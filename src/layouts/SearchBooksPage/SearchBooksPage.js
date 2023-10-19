@@ -1,8 +1,3 @@
-
 const SearchBooksPage = () => {
-  return (
-    <div>
-    </div>
-  );
+  return <div></div>;
 };
-

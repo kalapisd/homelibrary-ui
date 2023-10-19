@@ -7,15 +7,15 @@ import "./fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf";
 import "./fonts/Space_Grotesk/static/SpaceGrotesk-SemiBold.ttf";
 
 import HomePage from "./layouts/HomePage/HomePage";
-import AdminPage from "./layouts/AdminPage/AdminPage";
-
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <HomePage />
+      <Footer />
     </div>
   );
 };
