@@ -1,15 +1,19 @@
+import { useOktaAuth } from "@okta/okta-react";
+import { Link } from "react-router-dom";
+
 import readpromo from "../../../assets/images/pile-books-wooden-table.jpg";
 
 const SearchPromo = () => {
+
+  const { authState } = useOktaAuth();
+  
   return (
     <div>
       <div className="d-none d-lg-block">
         <div className="row g-0 mt-5">
           <div className="col-sm-6 col-md-6">
             <div className=".box1 img">
-              <img
-                src={`${readpromo}`}
-              />
+              <img src={`${readpromo}`} alt="promo" />
             </div>
           </div>
           <div className="col-4 col-md-4 container d-flex justify-content-center align-items-center">
@@ -23,9 +27,19 @@ const SearchPromo = () => {
                 you're sure to find something captivating. Discover and lose
                 yourself in the pages of our collection today.
               </p>
-              <a className="btn btn-secondary btn-lg text-white" href="#">
-                Sign up
-              </a>
+              {authState?.isAuthenticated ? (
+                <Link
+                  type="button"
+                  className="btn main-color btn-lg text-white"
+                  to="/search"
+                >
+                  Explore top books{" "}
+                </Link>
+              ) : (
+                <Link className="btn main-color btn-lg text-white" to="/login">
+                  Sign up
+                </Link>
+              )}
             </div>
           </div>
         </div>
@@ -55,7 +69,7 @@ const SearchPromo = () => {
                 you're sure to find something captivating. Discover and lose
                 yourself in the pages of our collection today.
               </p>
-              <a className="btn btn-secondary btn-sm text-white" href="#">
+              <a className="btn btn-secondary btn-sm text-white" href="/home">
                 Sign up
               </a>
             </div>
