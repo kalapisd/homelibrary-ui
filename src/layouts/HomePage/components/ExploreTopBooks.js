@@ -1,4 +1,5 @@
 import background from "../../../assets/images/wallpaper.jpg"; 
+import { Link } from "react-router-dom";
 
 const ExploreTopBooks = () => {
   return (
@@ -16,13 +17,8 @@ const ExploreTopBooks = () => {
         <div >
           <h1 className="display-5 fw-bold">Find your next adventure</h1>
           <p className="col-md-8 fs-4 text-black">Where would you like to go next?</p>
-          <a
-            type="button"
-            className="btn btn-light btn-lg text-black"
-            href="#"
-          >
-            Explore top books
-          </a>
+          <Link type='button' className='btn btn-light btn-lg text-black' to='/search'>
+                        Explore top books</Link>
         </div>
       </div>
     </div>
