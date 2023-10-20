@@ -1,4 +1,5 @@
 import "./App.css";
+import { useNavigate, Routes, Route } from "react-router-dom";
 
 import "./fonts/Space_Grotesk/static/SpaceGrotesk-Bold.ttf";
 import "./fonts/Space_Grotesk/static/SpaceGrotesk-Light.ttf";
@@ -6,18 +7,41 @@ import "./fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf";
 import "./fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf";
 import "./fonts/Space_Grotesk/static/SpaceGrotesk-SemiBold.ttf";
 
+import { oktaConfig } from "./lib/oktaConfig";
+import { OktaAuth, toRelativeUrl } from "@okta/okta-auth-js";
+import { Security, LoginCallback } from "@okta/okta-react";
+import LoginWidget from "./Auth/LoginWidget";
+
 import HomePage from "./layouts/HomePage/HomePage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const App = () => {
+const oktaAuth = new OktaAuth(oktaConfig);
+
+export const App = () => {
+  const customAuthHandler = () => {
+    navigate("/login");
+  };
+
+  const navigate = useNavigate();
+
+  const restoreOriginalUri = async (_oktaAuth, originalUri) => {
+    navigate(toRelativeUrl(originalUri || "/", window.location.origin));
+  };
   return (
-    <div>
+      <Security
+        oktaAuth={oktaAuth}
+        restoreOriginalUri={restoreOriginalUri}
+        onAuthRequired={customAuthHandler}>
       <Navbar />
-      <HomePage />
+      <div className="flex-grow-1">
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/login" element={<LoginWidget config={oktaConfig} />} />
+          <Route path='/login/callback' component={LoginCallback} />
+        </Routes>
+      </div>
       <Footer />
-    </div>
+      </Security>
   );
 };
-
-export default App;
