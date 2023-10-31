@@ -30,12 +30,6 @@ background-color: #31373a ;
   height: 25em !important;
 }
 
-.homepage-carousel-title {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
 .book-div {
   width: 480px;
   height: 384px;
