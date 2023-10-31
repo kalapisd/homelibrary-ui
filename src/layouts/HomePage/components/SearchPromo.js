@@ -8,9 +8,9 @@ const SearchPromo = () => {
   const { authState } = useOktaAuth();
   
   return (
-    <div>
+    <div className="mt-3">
       <div className="d-none d-lg-block">
-        <div className="row g-0 mt-5">
+        <div className="row g-0 ">
           <div className="col-sm-6 col-md-6">
             <div className=".box1 img">
               <img src={`${readpromo}`} alt="promo" />
@@ -55,7 +55,7 @@ const SearchPromo = () => {
       </div>
 
       {/* Mobile SearchPromo */}
-      <div className="d-lg-none">
+      <div className="d-lg-none display-flex">
         <div className="container">
           <div className="m-2">
             <div className="col-image-left"></div>
